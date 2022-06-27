@@ -1,0 +1,46 @@
+#!/usr/bin/env python
+# coding=utf-8
+
+import os
+import sys
+import codecs
+from agouti_pkg.eprint import eprint
+import agouti_pkg.gffutils
+import agouti_pkg.gffutils.inspect as inspect
+from operator import attrgetter
+from agouti_pkg.database import Database
+from agouti_pkg.argument_parser import (parse_arguments,
+                             create_attributes_and_features_dict)
+from agouti_pkg.sequence_ontology import *
+from agouti_pkg.processing_product import ProcessingProduct
+from agouti_pkg.miscallaneous import *
+from agouti_pkg.read_input import *
+from agouti_pkg.header import *
+from agouti_pkg.output_processing import prepare_output
+import agouti_pkg.agouti_annotate
+import agouti_pkg.agouti_create_database
+
+
+
+def main(argv):
+    """Main function
+
+    Arguments:
+        argv {argparse.Namespace} -- command line arguments parsed with\
+            argparse
+    """
+    num_of_bed_fields = -1
+    lengths_dict = {}  # stores length of UTRs and CDS of a given transcript
+
+    args = parse_arguments(argv)
+    if args.command == "annotate":
+        agouti_pkg.agouti_annotate.main(args)
+    elif args.command == "create_db":
+        print("Running the create_db pipeline. Please be patient, it may take a while")
+        agouti_pkg.agouti_create_database.main(args)
+    return
+
+
+if __name__ == "__main__":
+
+    sys.exit(main(sys.argv))

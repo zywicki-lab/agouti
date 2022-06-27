@@ -21,7 +21,7 @@ Python >= 3.7 is required to run this software.
 
 You can install AGouTI using `pip` as follows (recommended)
 
-`pip install -i https://test.pypi.org/simple/ AGouTI`
+`pip install AGouTI`
 
 or by 
 

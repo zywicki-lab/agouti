@@ -191,7 +191,7 @@ Output is by default displayed on stdout in the form of a self-explanatory `.tsv
 
 ## Test case 1
 
-All files used in this case are available at https://github.com/marekzyw/AGOUTI
+All files used in this case are available at https://github.com/zywicki-lab/agouti
 
 ### Annotate human single nucleotide polymorphisms (SNPs) stored in the BED file (`common_snp.bed`). 
 
@@ -240,7 +240,7 @@ You can explore the differences by examining the `annotated_snp_l1.tsv` file.
 
 ## Test case 2
 
-All files used in this case are available at https://github.com/marekzyw/AGOUTI
+All files used in this case are available at https://github.com/zywicki-lab/agouti
 
 ### Annotate sample results obtained with the missRNA software (https://github.com/marekzyw/missRNA, `missRNA.tsv`).
 

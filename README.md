@@ -242,7 +242,7 @@ You can explore the differences by examining the `annotated_snp_l1.tsv` file.
 
 All files used in this case are available at https://github.com/zywicki-lab/agouti
 
-### Annotate sample results obtained with the missRNA software (https://github.com/marekzyw/missRNA, `missRNA.tsv`).
+### Annotate sample results obtained with the missRNA software (`missRNA.tsv`). Records represent coordinates of the small RNA molecules excised from the longer RNA molecules.
 
 We've downloaded human gene annotations (only the 1st chromosome, genome version <i>GRCh38.p13</i>) in the GFF3 file format from the Ensembl database (<i>https://www.ensembl.org</i>) and subtracted to contain only the first 68571 lines.
 

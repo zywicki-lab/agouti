@@ -161,7 +161,6 @@ def read_header_line(bed_file, custom, sep, header_line_num):
     Returns:
         [tuple] -- header line, list of header fields
     """
-
     f = open(bed_file)
     lines = f.readlines()
     header = False
@@ -174,12 +173,14 @@ def read_header_line(bed_file, custom, sep, header_line_num):
     if custom != "BED" and header:
         custom_format = list(
             map(int, list(filter(None, custom.split(',')))))
-        sh = list(filter(None, potential_header.strip().split(sep)))
+        sh = list(filter(None, potential_header.strip().split(codecs.decode(
+                                                       sep,
+                                                       'unicode_escape'))))
         for i in range(0, len(sh)):
             if (i + 1 not in custom_format):
                 field_list.append(sh[i])
     elif custom == "BED":
-        sh = list(filter(None, potential_header.strip().split("\t")))
+        sh = list(filter(None, potential_header.strip().split()))
         if len(sh) > 6:
             field_list = sh[6:]
     return header, field_list

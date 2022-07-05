@@ -117,24 +117,23 @@ def main(args):
                                         checklines=50)
         else:
             if (not args.save_on_disk):
-                if (not args.save_on_disk):
-                    db = agouti_pkg.gffutils.create_db(args.annotation, force=True,
-                                        keep_order=False,
-                                        sort_attribute_values=False,
-                                        merge_strategy="create_unique",
-                                        disable_infer_genes= not args.infer_genes,
-                                        disable_infer_transcripts=not args.infer_transcripts,
-                                        transform=transform_func,
-                                        dbfn=":memory:", checklines=50)
-                else:
-                    db = agouti_pkg.gffutils.create_db(args.annotation, force=True,
-                                        keep_order=False,
-                                        sort_attribute_values=False,
-                                        merge_strategy="create_unique",
-                                        disable_infer_genes= not args.infer_genes,
-                                        disable_infer_transcripts=not args.infer_transcripts,
-                                        transform=transform_func,
-                                        dbfn=args.database, checklines=50)
+                db = agouti_pkg.gffutils.create_db(args.annotation, force=True,
+                                    keep_order=False,
+                                    sort_attribute_values=False,
+                                    merge_strategy="create_unique",
+                                    disable_infer_genes= not args.infer_genes,
+                                    disable_infer_transcripts=not args.infer_transcripts,
+                                    transform=transform_func,
+                                    dbfn=":memory:", checklines=50)
+            else:
+                db = agouti_pkg.gffutils.create_db(args.annotation, force=True,
+                                    keep_order=False,
+                                    sort_attribute_values=False,
+                                    merge_strategy="create_unique",
+                                    disable_infer_genes= not args.infer_genes,
+                                    disable_infer_transcripts=not args.infer_transcripts,
+                                    transform=transform_func,
+                                    dbfn=args.database, checklines=50)
 
     except ValueError:
         eprint("{}ERROR: The file {} has the wrong format or does not exist".format(os.linesep, args.annotation))

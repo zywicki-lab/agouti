@@ -11,7 +11,7 @@ REQUIRES_PYTHON = '>=3.7.0'
 
 setup(
     name="AGouTI",
-    version="1.0",
+    version="1.0.1",
     description="Annotation of Genomic and Transcriptomic Intervals using GTF/GFF files.",
     long_description=README,
     long_description_content_type="text/markdown",

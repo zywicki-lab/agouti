@@ -15,7 +15,7 @@ setup(
     description="Annotation of Genomic and Transcriptomic Intervals using GTF/GFF files.",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/marekzyw/agouti",
+    url="ttps://github.com/zywicki-lab/agouti",
     author="Jan Kosinski",
     python_requires=REQUIRES_PYTHON,
     author_email="jankos@amu.edu.pl",

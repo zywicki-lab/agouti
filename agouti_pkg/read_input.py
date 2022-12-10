@@ -117,6 +117,7 @@ def read_BED_file(bed_file, num_of_bed_fields, first_base_num, header_line_num):
                    the input file
     """
     products = {}
+    counter = 0
     with open(bed_file) as f: 
         for index, line in enumerate(f): ###
             if header_line_num - index > 0:
@@ -133,6 +134,9 @@ def read_BED_file(bed_file, num_of_bed_fields, first_base_num, header_line_num):
                     # fill the rest (up to 6) with blank fields
                     tab.append(".")
                 processing_product, score, strand = tab[3], tab[4], tab[5]
+                if processing_product == ".":
+                    processing_product = f"unnamed_agouti_feature_{counter}"
+                    counter += 1
                 if coord_outside_transcript != "No":
                     product = ProcessingProduct(coordinates,
                                                 processing_product,

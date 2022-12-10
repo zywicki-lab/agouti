@@ -112,7 +112,6 @@ def main(args):
                     chromosomes_found.add(value.coordinates[0])
             ##
             
-
             if (not args.strand_specific):
                 overlapping_features = list(
                     db.database.region(region=region,

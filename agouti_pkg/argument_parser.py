@@ -98,7 +98,7 @@ def parse_arguments(argv):
 
     if args.command == "create_db":
         if ((args.infer_genes or args.infer_transcripts) and args.format == "GFF3"):
-            parser.error("Use option --infer_genes and/or --infer_transcripts only with GTF file format")
+            parser.error("Use option --infer_genes and/or --infer_transcripts only with the GTF file format")
     elif args.command == "annotate":
         args = parser.parse_args(argv[1:])
         validate_arguments(args, parser)

@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/507955874.svg)](https://zenodo.org/badge/latestdoi/507955874)
+
 # AGouTI - Annotation of Genomic and Transcriptomic Intervals
 
 ## Introduction
